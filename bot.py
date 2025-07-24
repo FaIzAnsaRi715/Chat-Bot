@@ -5,13 +5,13 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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"
+    api_key="Enter your API key"
 )
 
 # Pause to give you time to switch to the desired window
 # time.sleep(2)
 
-def is_last_message_from_sender(chat_log, sender_name="GadHuu"):
+def is_last_message_from_sender(chat_log, sender_name="Enter contact name"):
     # Split the entire chat into lines
     messages = chat_log.strip().split("/2025]")[-1]
 
@@ -49,7 +49,7 @@ while True:
         completion = client.chat.completions.create(
             model = "deepseek/deepseek-chat-v3-0324:free",
             messages=[
-                {"role": "system", "content": "You are a person named FaIz who speaks hindi. You are from India and you are a playboy for flirting a girls. you analyze chat history and respond like FaIz. Out put should be the next chat response (text message only)"},
+                {"role": "system", "content": "You are a person named kkk who speaks hindi as well english. You are from India and is a coder. you analyze chat history and respond like kkk. Out put should be the next chat response (text message only)"},
                 {"role": "user", "content": chat_History}
             ]
         )
